@@ -15,8 +15,8 @@ If using [nvim-treesitter][3] plugin you can install with `:TSInstall go`.
 ## Installation
 
 - Install like any other neovim plugin:
-  - If using [vim-plug][4]: `Plug 'leoluz/nvim-dap-go'`
-  - If using [packer.nvim][5]: `use 'leoluz/nvim-dap-go'`
+  - If using [vim-plug][4]: `Plug 'soyum2222/nvim-dap-go'`
+  - If using [packer.nvim][5]: `use 'soyum2222/nvim-dap-go'`
 
 ## Usage
 
@@ -30,7 +30,7 @@ lua require('dap-go').setup()
 
 ### Use nvim-dap as usual
 
-- Call `:lua require('dap').continue()` to start debugging.
+- Call `:lua require('dap-go').start_debug()` to start debugging.
 - See `:help dap-mappings` and `:help dap-api`.
 
 ### Debugging individual tests
@@ -43,7 +43,7 @@ It is better to define a mapping to invoke this command. See the mapping section
 ## Mappings
 
 ```vimL
-nmap <silent> <leader>td :lua require('dap-go').debug_test()<CR>
+nmap <silent> <leader>c :lua require('dap-go').start_debug()<CR>
 ```
 
 ## Acknowledgement
@@ -56,3 +56,4 @@ Thanks to the [nvim-dap-python][6] for the inspiration.
 [4]: https://github.com/junegunn/vim-plug
 [5]: https://github.com/wbthomason/packer.nvim
 [6]: https://github.com/mfussenegger/nvim-dap-python
+[7]: https://github.com/skywind3000/asyncrun.vim
